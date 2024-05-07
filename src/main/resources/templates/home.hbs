@@ -1,0 +1,43 @@
+{{#partial "recursos" }}
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/scroll.css">
+{{/partial}}
+{{#partial "contenido" }}
+            <div class="content">
+                    <!-- Sección de Comunidades con desplazamiento horizontal -->
+                    <h1 class="title">Comunidades</h1>
+                    <div class="scroll-box">
+
+                        <div class="box-container">
+                        {{#if comunidades}}
+                             {{#each comunidades}}
+                                <a href="comunidad/{{this.id}}" class="box community-button">{{this.nombre}}</a>
+                             {{/each}}
+                        {{else}}
+                            <div class="message">
+                                <p>No has ingresado a ninguna comunidad.</p>
+                            </div>
+
+                        {{/if}}
+                        </div>
+                    </div>
+
+
+                    <h1 class="title">Revisiones</h1>
+                    <div class="scroll-box">
+                        <div class="box-container">
+                        {{#if incidentes}}
+                            {{#each incidentes}}
+                                <a href="comunidad/{{this.comunidad.id}}" class="box community-button">Revisar {{this.servicio.nombre}} de {{this.establecimiento.nombre}}</a>
+                            {{/each}}
+                        {{else}}
+                            <div class="message">
+                                <p>No hay ninguna revision pendiente.</p>
+                            </div>
+
+                        {{/if}}
+                        </div>
+                    </div>
+            </div>
+{{/partial}}
+{{> templates/sidebar }}

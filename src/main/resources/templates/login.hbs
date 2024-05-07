@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>Bienvenido</h1>
+            <p>Por favor, inicia sesión para acceder a las comunidades.</p>
+            <img src="../img/a.png" alt="Imagen">
+        </div>
+
+        <div class="content">
+        <div class="form-content">
+            <h1>Iniciar Sesión</h1>
+
+            <form action="/login" method="post">
+                <div class="form">
+                     <input type="text" name="usuario" placeholder="Usuario" required><br>
+                     <input type="password" name="contrasenia" placeholder="Contraseña" required><br>
+                     {{#if error}}
+                         <div class="error-message">Credenciales inválidas. Inténtalo de nuevo.</div>
+                     {{/if}}
+                    <input type="submit" id="obtenerUbicacion" value="Iniciar Sesión">
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+    <script>
+    document.getElementById("obtenerUbicacion").addEventListener("click", obtenerUbicacion);
+
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var latitud = position.coords.latitude;
+            var longitud = position.coords.longitude;
+
+            fetch("/guardar-ubicacion", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ latitud: latitud, longitud: longitud })
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data); // Mensaje de respuesta del servidor
+            })
+            .catch(error => {
+                console.error("Error al enviar la ubicación al servidor: " + error);
+            });
+        }, function (error) {
+            console.error("Error al obtener la ubicación: " + error);
+        });
+    } else {
+        console.log("La geolocalización no es compatible en este navegador.");
+    }
+    </script>
+</body>
+</html>

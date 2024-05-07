@@ -1,0 +1,14 @@
+{{#partial "recursos" }}
+    <link rel="stylesheet" href="/css/perfil.css">
+
+{{/partial}}
+{{#partial "contenido" }}
+<div class="perfil-usuario">
+    <img src="/img/perfil.jpg" alt="{{usuario.username}}"> <!-- Reemplaza con el atributo correcto para la imagen -->
+    <h2>{{usuario.username}}</h2>
+    <p><strong>Nombre:</strong> {{usuario.nombre}} {{usuario.apellido}}</p>
+    <p><strong>Correo de contacto:<strong> {{usuario.mail}}</p>
+    <p>Comunidades a las que pertenece: {{usuario.perfiles.size}}</p>
+</div>
+{{/partial}}
+{{> templates/sidebar}}

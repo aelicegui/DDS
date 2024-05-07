@@ -1,0 +1,117 @@
+.scroll-box {
+    max-height: 450px; /* Altura máxima de la scroll box */
+    max-width: 1050px;
+    margin-top: 10%;
+    overflow-y: auto; /* Hacer que haya desplazamiento vertical si es necesario */
+    background-color: #f2f2f2; /* Color de fondo */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #e0e0e0; /* Borde con color suave */
+}
+
+.user-block {
+    background-color: #fff; /* Color de fondo del bloque de usuario */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-top: 3px solid #78c2ad; /* Línea superior del color de la barra lateral */
+    width: 300px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.profile-button, .delete-button {
+    background-color: #78c2ad;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.profile-button:hover, .delete-button:hover {
+    background-color: #5b9e8e;
+}
+
+.profile-button i, .delete-button i {
+    font-size: 18px; /* Tamaño del icono */
+    margin-right: 5px; /* Espacio entre el icono y el texto del botón */
+}
+
+.user-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+/* Barra superior */
+#nombreComunidad{
+    width: 300px;
+}
+button {
+    background-color: #78c2ad; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.topbar {
+    background-color: #78c2ad; /* Color de fondo */
+    height: 20%;
+    display: flex;
+    align-items: center; /* Centrar verticalmente el contenido */
+    position: fixed; /* Fijar la barra lateral en su lugar */
+    top: 0; /* Alinear en la parte superior */
+    bottom: 0; /* Extender hasta la parte inferior */
+    min-width: 80%;
+    overflow-x: auto;
+    color: #012c58; /* Color del título (verde pastel) */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #5a9c88; /* Color de fondo al pasar el mouse */
+}
+
+button i{
+    margin-right: 5px;
+}
+
+.boton-volver {
+    background-color: #78c2ad; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 45%;
+
+}
+
+#volver span{
+    font-size: 18px;
+}
+
+#volver i{
+    font-size: 18px;
+}
+
+.boton-volver:hover {
+    background-color: #5a9c88; /* Color de fondo al pasar el mouse */
+}

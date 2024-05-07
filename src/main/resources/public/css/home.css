@@ -1,0 +1,115 @@
+.content {
+    flex: 2.5;
+    display: block;
+    margin-left: 20px;
+    margin-top: 5%;
+    justify-content: center;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.incidents {
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.incident {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.comunidades {
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.button-list {
+    list-style: none;
+    padding: 0;
+}
+
+.button-list li {
+    margin-bottom: 10px;
+}
+
+.community-button {
+    width: 300px; /* Ancho de cada comunidad */
+    margin: 10px;
+    padding: 15px;
+    background-color:#78c2ad; /* Color de fondo */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #ffffff; /* Color del texto */
+    text-align: center;
+    overflow: hidden;
+
+   /* display: block;
+    padding: 10px 20px;
+    background-color: #0066cc;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;*/
+}
+
+.community-button:hover {
+    background-color: #5a9c88;
+}
+
+.title-revision {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.scroll-box {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 96%;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.box-container {
+    max-width: 1000px; /* Ancho máximo del contenido */
+    height: auto;
+    margin-top: 20px;
+    margin-left: -10px;
+    margin-right: 30px;
+    display: flex;
+/*    display: flex;
+    width: auto;
+    height: auto; */
+}
+
+.box {
+    flex: 0 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #78c2ad;
+    margin-right: 10px;
+}
+
+.message {
+    padding: 20px;
+    margin-left: 20px;
+    background-color: #78c2ad; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.box-container a{
+    text-decoration: none;
+}

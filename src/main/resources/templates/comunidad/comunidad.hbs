@@ -1,0 +1,84 @@
+{{#partial "recursos" }}
+    <link rel="stylesheet" href="/css/comunidad.css">
+    <link rel="stylesheet" href="/css/scroll.css">
+
+{{/partial}}
+{{#partial "contenido" }}
+      <!-- Sección de Comunidad -->
+            {{#if comunidad}}
+                <div class="topbar">
+                    <span id="nombreComunidad">{{comunidad.nombre}}</span>
+                    <div class="boton-miembros">
+                        <form action = "/comunidad/{{comunidad.id}}/miembros" method = "get">
+                            <button type="submit" id="verMiembros">
+                                <i class="fas fa-users fa-2x invisible-icon"></i> <span>Miembros</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                {{#if incidentes}}
+                <div class="scroll-box">
+                        <!-- Lista de incidentes dentro de esta comunidad -->
+                        <!-- Puedes obtener el nombre de la comunidad de alguna manera y luego usar JavaScript para cambiarlo -->
+                        {{#each incidentes}}
+                        <div class="incident-box">
+                            <h3>Incidente</h3>
+                            <p><strong>Fecha de Apertura:</strong> {{this.fechaAperturaFormateada}}</p>
+                            <p><strong>Servicio:</strong> {{this.servicio.nombre}}</p>
+                            <p><strong>Entidad:</strong> {{this.entidad.nombre}}</p>
+                            <p><strong>Establecimiento:</strong> {{this.establecimiento.nombre}}</p>
+                            <p><strong>Estado:<span class="{{this.estadoIncidente}}"></strong> {{this.estadoIncidente}}</span></p>
+                            <p><strong>Descripción:</strong> {{this.descripcion}}</p>
+                            {{#if this.fechaHoraCierre}}
+                                <p><strong>Fecha de Cierre:</strong> {{this.fechaCierreFormateada}}</p>
+                            {{else}}
+                                <form action = "/comunidad/{{comunidad.id}}/incidente/{{this.id}}" method = "post">
+                                    <button type="submit" id="marcarResuelto">
+                                    <i class="fas fa-check"></i> Marcar como Resuelto
+                                    </button>
+                                </form>
+                                <p></p>
+
+                            {{/if}}
+
+
+                        </div>
+                        {{/each}}
+                </div>
+                {{else}}
+                    <div class="message">
+                        <h1>La comunidad no tiene Incidentes {{#if filtro}} {{filtro.toUpperCase}}S {{/if}}</h1>
+                        <p>Lo sentimos, los incidentes que estás buscando no existen</p>
+                    </div>
+
+                {{/if}}
+                <div class="filter-dropdown">
+                    <form action="/comunidad/{{comunidad.id}}" method="post">
+                       <select name="filtroEstado">
+                            <option value="todos">Todos</option>
+                            <option value="abierto">Abiertos</option>
+                            <option value="resuelto">Resueltos</option>
+                       </select>
+                            <input type="submit" value="Filtrar">
+                    </form>
+                </div>
+                {{#if filtro}}
+                    <span class="filtro">{{filtro.toUpperCase}}S </span>
+                {{/if}}
+                <div class="boton-crear">
+                    <form action = "/comunidad/{{comunidad.id}}/incidente/crear" method = "get">
+                        <button type="submit" id="crearIncidente">
+                            <i class="fas fa-plus fa-2x"></i> <span>Cargar Nuevo Incidente</span>
+                        </button>
+                    </form>
+                </div>
+            {{else}}
+                    <div class="message">
+                        <h1>Comunidad no encontrada</h1>
+                        <p>Lo sentimos, la comunidad que estás buscando no se encuentra</p>
+                    </div>
+            {{/if}}
+
+
+{{/partial}}
+{{> templates/sidebar }}

@@ -1,0 +1,37 @@
+{{#partial "recursos" }}
+    <link rel="stylesheet" href="/css/rankings.css">
+    <link rel="stylesheet" href="/css/scroll.css">
+{{/partial}}
+{{#partial "contenido" }}
+        <div class="bloque-ranking">
+            <h1 class="ranking-title">Rankings Según Cantidad de Incidentes Reportados</h1>
+            <div class="ranking-container">
+              <div class="ranking">
+                    {{#each rankingCantidad}}
+                        <div class="ranking-item"> <span class="ranking-position">{{lookup ../posicion @index}}°</span> {{this.nombre}}</div>
+                    {{/each}}
+              </div>
+            </div>
+        </div>
+        <div class="bloque-ranking">
+            <h1 class="ranking-title">Rankings Según Promedio de Tiempo de Cierre de Incidentes</h1>
+            <div class="ranking-container">
+                <div class="ranking">
+                {{#each rankingTiempo}}
+                    <div class="ranking-item"> <span class="ranking-position">{{lookup ../posicion @index}}°</span> {{this.nombre}}</div>
+                {{/each}}
+                </div>
+            </div>
+        </div>
+        <div class="bloque-ranking">
+            <h1 class="ranking-title">Rankings Según Grado de Impacto de las Problematicas</h1>
+            <div class="ranking-container">
+                <div class="ranking">
+                {{#each rankingImpacto}}
+                    <div class="ranking-item"> <span class="ranking-position">{{lookup ../posicion @index}}°</span> {{this.nombre}}</div>
+                {{/each}}
+                </div>
+            </div>
+        </div>
+{{/partial}}
+{{> templates/sidebar }}

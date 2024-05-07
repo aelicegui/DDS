@@ -1,0 +1,97 @@
+/* Estilos generales para los bloques de ranking */
+.bloque-ranking {
+    margin-bottom: 20px;
+    background-color: #f5f5f5; /* Color de fondo de los bloques de ranking */
+    border-top: 4px solid #78c2ad; /* Línea superior con el color de la barra lateral */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Estilos para el título de cada ranking */
+.ranking-title {
+    background-color: #78c2ad; /* Color de fondo del título */
+    color: #f5f5f5; /* Color del texto del título */
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
+}
+
+/* Estilos para los contenedores de la caja de desplazamiento */
+.ranking-container {
+    width: 100%;
+    max-width: 1000px;
+    overflow-x: auto;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+/* Estilos para la caja de desplazamiento (ranking) */
+.ranking {
+    white-space: nowrap;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilos para los elementos de ranking */
+.ranking-item {
+    width: 200px; /* Ancho deseado */
+    height: 25px; /* Altura deseada */
+    background-color: #f5f5f5; /* Color de fondo de la barra lateral */
+    border: 1px solid #78c2ad; /* Borde del color de la barra lateral */
+    border-radius: 10px; /* Bordes redondeados, ajusta el valor según tu preferencia */
+    text-align: center; /* Centrar el contenido vertical y horizontalmente */
+    align-items: center;
+    margin: 10px; /* Márgenes entre los elementos si lo deseas */
+    display: inline-block; /* Para que los elementos se muestren en línea y se ajusten en la misma fila */
+}
+
+/* Estilos para la posición (número) de ranking */
+.ranking-position {
+    font-weight: bold;
+    margin-right: 5px;
+}
+/*
+.ranking-container {
+    width: 300px;
+    overflow-x: auto;
+}
+
+.ranking {
+    white-space: nowrap;
+    font-size: 18px;
+}
+
+.ranking-item {
+    display: inline-block;
+    margin-right: 20px;
+}
+*//*
+.ranking-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.rankings {
+    float: right;
+    margin-left: 25px;
+    padding: 200px;
+}
+
+.ranking-list {
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.ranking-item {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    margin-bottom: 5px;
+} */

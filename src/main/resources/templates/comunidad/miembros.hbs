@@ -1,0 +1,41 @@
+{{#partial "recursos" }}
+    <link rel="stylesheet" href="/css/miembros.css">
+    <link rel="stylesheet" href="/css/scroll.css">
+
+{{/partial}}
+{{#partial "contenido" }}
+    <div class="topbar">
+        <span id="nombreComunidad">{{comunidad.nombre}}</span>
+        <div class="boton-volver">
+            <form action = "/comunidad/{{comunidad.id}}" method = "get">
+                <button type="submit" id="volver">
+                    <i class="fas fa-arrow-left"></i> <span>Volver a Comunidad</span>
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="scroll-box">
+    <div class="user-container">
+        {{#each miembros}}
+            <div class="user-block">
+                <div class="user-info">
+                    <p>{{this.usuario.username}}</p>
+                </div>
+                <div class="user-actions">
+                    <form action = "/perfil/{{this.usuario.id}}" method = "get">
+                    <button type="submit" class="profile-button"> <i class="fas fa-user"></i> Ver Perfil</button>
+                    </form>
+                {{#if esAdmin}}
+                    {{#unless this.admin}}
+                        <form action = "/comunidad/{{comunidad.id}}/miembro/{{this.id}}" method = "post">
+                        <button class="delete-button"> <i class="fas fa-trash-alt"></i> Eliminar</button>
+                        </form>
+                    {{/unless}}
+                {{/if}}
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    </div>
+{{/partial}}
+{{> templates/sidebar }}

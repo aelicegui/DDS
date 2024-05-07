@@ -1,0 +1,36 @@
+/* Estilo para el perfil de usuario */
+.perfil-usuario {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #888;
+}
+
+/* Estilo para la imagen de perfil */
+.perfil-usuario img {
+    max-width: 150px;
+    border: 3px solid #78c2ad; /* Color de la barra lateral */
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Estilo para el nombre de usuario */
+.perfil-usuario h2 {
+    margin: 10px 0;
+    border-bottom: 2px solid #78c2ad; /* Línea divisoria */
+    padding-bottom: 5px;
+}
+
+/* Estilo para el resto de la información */
+.perfil-usuario p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Estilo para la cantidad de comunidades */
+.perfil-usuario p:last-child {
+    font-weight: bold;
+}

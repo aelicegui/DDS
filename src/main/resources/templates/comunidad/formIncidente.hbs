@@ -1,0 +1,37 @@
+{{#partial "recursos" }}
+    <link rel="stylesheet" href="/css/formIncidente.css">
+{{/partial}}
+{{#partial "contenido" }}
+                    <div class="content">
+                        {{#if comunidad}}
+                            <div class="form-container">
+                                <h1>Crear Incidente</h1>
+                               <form action="/comunidad/{{comunidad.id}}/incidente/crear" method="post">
+                                    <select name="servicio" required>
+                                        <option value="">Seleccionar Servicio</option>
+                                        {{#each servicios}}
+                                                <option value="{{this.id}}">{{this.nombre}}</option>
+                                        {{/each}}
+                                    </select>
+                                    <select name="entidad" required>
+                                        <option value="">Seleccionar Entidad</option>
+                                        {{#each entidades}}
+                                                <option value="{{this.id}}">{{this.nombre}}</option>
+                                        {{/each}}
+                                    </select>
+                                    <select name="establecimiento" required>
+                                        <option value="">Seleccionar Establecimiento</option>
+                                        {{#each establecimientos}}
+                                                <option value="{{this.id}}">{{this.nombre}}</option>
+                                        {{/each}}
+                                    </select>
+                                    <input type="text" name="descripcion" placeholder="Descripción" required>
+                                    <button class="create-button" type="submit">
+                                        <i class="fa fa-plus"></i> Crear
+                                    </button>
+                               </form>
+                            </div>
+                        {{/if}}
+                    </div>
+{{/partial}}
+{{> templates/sidebar }}

@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Color de fondo */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: #78c2ad; /* Color de la barra lateral */
+    flex: 1.5; /* Aumentamos el ancho de la barra lateral */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; /* Color del texto de la barra lateral */
+}
+
+.sidebar img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px; /* Espacio entre el texto y la imagen */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Establecemos la altura al 100% de la ventana */
+}
+
+.content {
+    flex: 2.5; /* Aumentamos el ancho del contenido */
+    padding: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:  center;
+}
+
+.form-content {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form {
+    flex: 2.5;
+    display: flex;
+    width: 350px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-message {
+    background-color: #f8c0c0; /* Color de fondo pastel */
+    color: #8b0000; /* Color de texto pastel */
+    padding: 10px;
+    border: 1px solid #ff5757; /* Borde pastel */
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h1 {
+    color: #333; /* Color del título del formulario */
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px; /* Menos espacio entre los campos de entrada */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #78c2ad; /* Color del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 30px; /* Aumentamos el ancho del botón */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex; /* El botón aparecerá debajo de los campos de entrada */
+    flex-direction: column;
+}
+
+input[type="submit"]:hover {
+    background-color: #5a9c88; /* Color del botón al pasar el mouse */
+}

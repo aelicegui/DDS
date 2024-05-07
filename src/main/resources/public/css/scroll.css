@@ -1,0 +1,22 @@
+
+/* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+    height: 10px;
+}
+
+/* Estilos para el pulgar de la barra de desplazamiento (thumb) */
+::-webkit-scrollbar-thumb {
+    background: #78c2ad; /* Color de fondo del pulgar, similar al color de la barra lateral */
+    border-radius: 6px; /* Borde redondeado del pulgar */
+}
+
+/* Estilos para la parte de la barra de desplazamiento que no es el pulgar (track) */
+::-webkit-scrollbar-track {
+    background: #eee; /* Color de fondo del track */
+}
+
+/* Estilos para la parte de la barra de desplazamiento que no es el pulgar (track) */
+::-webkit-scrollbar-track-piece {
+    background: #eee; /* Color de fondo del track piece */
+}

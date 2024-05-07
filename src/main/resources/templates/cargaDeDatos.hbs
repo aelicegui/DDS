@@ -1,0 +1,62 @@
+{{#partial "recursos" }}
+    <link rel="stylesheet" href="/css/cargaDeDatos.css">
+
+{{/partial}}
+{{#partial "contenido" }}
+
+<div class="form-content">
+    <h2>CARGAR DATOS</h2>
+    <div class="button">
+        <form action = "/csv" method="post" enctype="multipart/form-data">
+        <div class="file-upload-drop-area" ondragover="allowDrop(event)" ondragleave="leaveDropArea(event)" ondrop="handleDrop(event)">
+            <label class="file-upload-container">
+                <div class="file-upload-icon">&#9660;</div>
+                <div class="file-upload-label">Selecciona un archivo CSV</div>
+                <input type="file" class="file-upload-input" accept=".csv" name="archivo" onchange="displayFileName(this)" />
+            </label>
+        </div>
+            <p class="file-name" id="file-name"></p>
+            <button type="submit" id="cargarCSV">
+                <i class="fas fa-plus fa-2x"></i> <span>Subir CSV</span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function displayFileName(input) {
+        const fileName = document.getElementById("file-name");
+        if (input.files.length > 0) {
+            fileName.textContent = "Nombre del archivo: " + input.files[0].name;
+        } else {
+            fileName.textContent = "Nombre del archivo: No seleccionado";
+        }
+    }
+
+    function allowDrop(event) {
+                event.preventDefault();
+                const dropArea = document.querySelector('.file-upload-drop-area');
+                dropArea.classList.add('hover');
+    }
+
+    function leaveDropArea(event) {
+        const dropArea = document.querySelector('.file-upload-drop-area');
+        dropArea.classList.remove('hover');
+    }
+
+    function handleDrop(event) {
+        event.preventDefault();
+        const dropArea = document.querySelector('.file-upload-drop-area');
+        dropArea.classList.remove('hover');
+
+        const archivo = event.dataTransfer.files[0];
+        if (archivo) {
+            // Aquí puedes procesar el archivo
+            displayFileName({ files: [archivo] });
+        }
+    }
+</script>
+
+
+{{/partial}}
+{{> templates/sidebar}}

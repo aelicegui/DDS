@@ -1,0 +1,16 @@
+{{#partial "recursos" }}
+    <link rel="stylesheet" href="/css/respuestaDatos.css">
+{{/partial}}
+{{#partial "contenido" }}
+      <div class="message">
+            {{#if cargado}}
+                <h1>Los datos se han cargado correctamente</h1>
+                <p>Gracias por su aporte</p>
+            {{else}}
+
+                <h1>Los datos no se han podido cargar</h1>
+                <p>Lo sentimos, intente de nuevo más tarde</p>
+            {{/if}}
+      </div>
+{{/partial}}
+{{> templates/sidebar }}

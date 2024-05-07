@@ -1,0 +1,93 @@
+h2{
+    margin-bottom: 20px;
+    border-bottom: 2px solid #78c2ad; /* Cambia el color a tu preferencia (en este caso, azul) */
+    padding-bottom: 10px; /* Espacio entre el título y la línea */
+}
+
+.form-content {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+button {
+    background-color: #78c2ad; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #5a9c88; /* Color de fondo al pasar el mouse */
+}
+button i{
+    margin-left: 5px;
+
+}
+
+form{
+    align-items: center;
+    justify-content: center;
+}
+
+#cargarCSV{
+    margin-top: 10px;
+}
+
+#cargarCSV i{
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+#cargarCSV span{
+    font-size: 18px;
+    color: #fff; /* Color del texto */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.file-upload-container {
+    border: 2px dashed #ccc;
+    padding: 80px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.file-upload-icon {
+    font-size: 24px;
+    color: #78c2ad;
+}
+
+.file-upload-label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.file-upload-input {
+    display: none;
+}
+
+.file-upload-container:hover {
+    border: 2px dashed #78c2ad; /* Cambia el color de borde al pasar el mouse */
+}
+
+.file-upload-drop-area {
+    padding: 20px;
+    text-align: center;
+}
+
+.file-upload-drop-area.hover {
+    background-color: #f0f0f0; /* Cambia el color de fondo al arrastrar sobre el área */
+}
+
+.file-name {
+    font-style: italic;
+}

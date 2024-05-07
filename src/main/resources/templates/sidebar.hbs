@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    {{#block "recursos"}}
+    {{/block}}
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="/img/logo.png" alt="Logo de la web">
+            </div>
+            <div class="user-profile">
+                <img src="/img/perfil2.png" alt="Foto de perfil">
+                <p class="user-name">{{usuarioLogueado.username}}</p>
+                <a href="/logout" class="logout-button"><i class="fas fa-sign-out-alt"></i> <p> Cerrar sesión</p></a>
+            </div>
+            <a href="/home" class="home-button">
+
+                <i class="fas fa-home fa-2x invisible-icon"></i>
+                <span>Home</span>
+            </a>
+            <div class="sections">
+                <ul>
+                    <a href="/comunidad" class="section-button">
+                        <i class="fas fa-users fa-2x invisible-icon"></i>
+                        <span>Comunidades</span>
+                    </a>
+                    <a href="/rankings" class="section-button">
+                       <i class="fas fa-chart-line fa-2x invisible-icon"></i>
+                       <span>Ranking</span>
+                    </a>
+                    {{#if usuarioLogueado.permisoCargaMasivaDeDatos}}
+
+                    <a href="/csv" class="section-button">
+                        <i class="fas fa-cloud-upload-alt fa-2x invisible-icon"></i>
+                        <span>Subir CSV</span>
+                    </a>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+        <div class="contenido">
+        {{#block "contenido"}}
+        {{/block}}
+        </div>
+    </div>
+</body>
+</html>

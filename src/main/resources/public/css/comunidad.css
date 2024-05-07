@@ -1,0 +1,195 @@
+
+.incident-box p span RESUELTO{
+    color: green;
+    font-weight: bold;
+}
+
+.incident-box p span ABIERTO{
+    color: red;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 20px;
+}
+
+#nombreComunidad{
+    width: 300px;
+}
+
+.boton-crear{
+    position: absolute;
+    margin-top: 40%;
+    align-items: center;
+    justify-content: center;
+
+ }
+
+.filter-dropdown{
+    position: absolute;
+    margin-top: -25%;
+    margin-right: 65%;
+
+}
+
+.filter-dropdown input{
+    background-color: #78c2ad; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filtro{
+    color: #78c2ad;; /* Color del texto */
+    font-size: 14px;
+    position: absolute;
+    margin-top: -25%;
+    margin-right: 65%;
+    margin-bottom: 1px;
+    margin-left: 220px;
+}
+
+.scroll-box{
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    overflow-x: auto; /* Agrega una barra de desplazamiento horizontal cuando sea necesario */
+    white-space: nowrap; /* Evita que los elementos se rompan en múltiples líneas */
+    width: 77%;
+    margin-top: 30px;
+}
+
+.incidents {
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.incident-box {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    background-color: #e0f4e1; /* Color de fondo pastel */
+    border: 2px solid #6c9876; /* Borde pastel */
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+    height: 80%;
+    margin-bottom: 5px;
+}
+
+.comunidades {
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.message {
+    text-align: center;
+    background-color: #e0f4e1; /* Color de fondo pastel */
+    border: 2px solid #6c9876; /* Borde pastel */
+    padding: 30px;
+    border-radius: 10px;
+    width: auto; /* Ancho máximo del contenedor */
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.topbar {
+    background-color: #78c2ad; /* Color de fondo */
+    height: 20%;
+    display: flex;
+    align-items: center; /* Centrar verticalmente el contenido */
+    position: fixed; /* Fijar la barra lateral en su lugar */
+    top: 0; /* Alinear en la parte superior */
+    bottom: 0; /* Extender hasta la parte inferior */
+    min-width: 80%;
+    overflow-x: auto;
+    color: #012c58; /* Color del título (verde pastel) */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.incident-box p {
+    color: #6c9876; /* Color del texto */
+    font-size: 18px;
+    width: 100%;
+
+
+}
+
+.message p {
+    color: #6c9876; /* Color del texto */
+    font-size: 24px;
+}
+
+h3{
+    color: #004488;
+}
+
+button {
+    background-color: #78c2ad; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#marcarResuelto{
+    margin-bottom: -8px;
+    margin-top: -6px;
+}
+
+button:hover {
+    background-color: #5a9c88; /* Color de fondo al pasar el mouse */
+}
+
+#crearIncidente{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button i{
+    margin-right: 5px;
+}
+
+.boton-miembros {
+    background-color: #78c2ad; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 55%;
+
+}
+
+#verMiembros span{
+    font-size: 18px;
+}
+
+#verMiembros i{
+    font-size: 18px;
+}
+#crearIncidente i{
+    font-size: 18px;
+}
+
+#crearIncidente span{
+    font-size: 18px;
+}
+
+.boton-miembros:hover {
+    background-color: #5a9c88; /* Color de fondo al pasar el mouse */
+}

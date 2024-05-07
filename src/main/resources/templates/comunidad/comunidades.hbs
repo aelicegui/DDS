@@ -1,0 +1,29 @@
+{{#partial "recursos" }}
+    <link rel="stylesheet" href="/css/comunidades.css">
+    <link rel="stylesheet" href="/css/scroll.css">
+
+{{/partial}}
+{{#partial "contenido" }}
+    <div class="topbar">
+            <img src="../img/people.jpg" alt="Gente">
+            <p>Com<span>unidad</span></p>
+    </div>
+    <div class="scroll-box">
+    <div class="comunity-container">
+    {{#each comunidades}}
+            <div class="comunity-block">
+                <div class="comunity-info">
+                    <p>{{this.nombre}}</p>
+                </div>
+                <div class="comunity-actions">
+                    <form action = "/comunidad/{{this.id}}/join" method = "post">
+                    <button type="submit" class="join-button"> <i class="fas fa-plus"></i> Unirse</button>
+                    </form>
+                </div>
+            </div>
+    {{/each}}
+    </div>
+
+    </div>
+{{/partial}}
+{{> templates/sidebar }}
